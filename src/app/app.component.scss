@@ -1,0 +1,34 @@
+@import 'styles/breakpoint_mixin.scss';
+
+.comic-content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        @include respond-to(extra-small) {
+            width: 100%;
+        }
+        @include respond-to(medium) {
+            width: 700px;
+        }
+        height: auto;
+    }
+}
+
+.title-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #333333;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+
+.actions-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}

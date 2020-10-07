@@ -4,6 +4,8 @@
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
+@import 'src/app/styles/breakpoint_mixin';
+
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
@@ -13,7 +15,7 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $comics-masivian-primary: mat-palette($mat-indigo);
-$comics-masivian-accent: mat-palette($mat-pink, A200, A100, A400);
+$comics-masivian-accent: mat-palette($mat-yellow, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $comics-masivian-warn: mat-palette($mat-red);
@@ -36,5 +38,24 @@ $comics-masivian-theme: mat-light-theme((
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #ECEEF2;
+}
+
+.container {
+  @include respond-to(extra-small) {
+    padding: 10px;
+  }
+
+  @include respond-to(medium) {
+    padding: 30px;
+  }
+
+  @include respond-to(large) {
+    padding: 100px;
+  }
+}
+
 
