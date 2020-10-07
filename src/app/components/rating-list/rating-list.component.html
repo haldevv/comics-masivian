@@ -1,0 +1,5 @@
+<ng-container *ngFor="let i of stars">
+    <button mat-icon-button aria-label="star icon" (click)="changeRate(i)">
+        <mat-icon color="accent">{{(i <= selectedStar) ? 'star_rate' : 'star_outline' }}</mat-icon>
+    </button>
+</ng-container>
