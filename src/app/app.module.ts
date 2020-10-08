@@ -8,9 +8,11 @@ import {MatCardModule} from '@angular/material/card'
 import {MatGridListModule} from '@angular/material/grid-list'
 import {MatButtonModule} from '@angular/material/button'
 import {MatIconModule} from '@angular/material/icon'
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 
 import { RatingListComponent } from './components/rating-list/rating-list.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 
@@ -26,9 +28,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatGridListModule,
     MatIconModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule,
+    MatProgressSpinnerModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

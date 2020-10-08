@@ -18,7 +18,8 @@ export class RatingListComponent implements OnInit {
 
   changeRate(value: number) {
     this.selectedStar = value
-    this.showMessage('Gracias por tu calificación: '+ value + ' estrella(s)')
+    let message = `Gracias por tu calificación: ${value} estrella${(value > 1)? 's' : ''}`
+    this.showMessage(message)
   }
 
   showMessage(message: string) {
